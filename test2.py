@@ -45,7 +45,7 @@ with tf.compat.v1.Session(graph=graph) as sess:
         )
 
         for i in range(len(scores[0])):
-            if scores[0][i] > 0.4:  # Threshold for detection
+            if scores[0][i] > 0.2:  # Threshold for detection
                 box = boxes[0][i]
                 class_name = class_names[int(classes[0][i])]
                 y1, x1, y2, x2 = box
